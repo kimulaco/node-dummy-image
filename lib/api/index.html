@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>node-dummy-image API</title>
+    <style>
+    * {
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+    }
+    #app {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+    <script>
+        (function () {
+            'use strict';
+
+            let app = document.getElementById('app');
+            let param = decodeURIComponent(location.search).replace('?', '').split('&');
+            let option = {};
+            let pxValue = [
+                'font-size',
+                'width',
+                'height'
+            ];
+
+            param.forEach((selfParam) => {
+                let selfOption = selfParam.split('=');
+                let prop = selfOption[0];
+                let value = selfOption[1];
+
+                console.log(value);
+
+                if (
+                    !prop ||
+                    prop === 'port'
+                ) {
+                    return;
+                } else if (prop === 'text') {
+                    app.textContent = value;
+                    return;
+                }
+
+                if (pxValue.indexOf(prop) >= 0) {
+                    value = parseInt(value, 10) + 'px';
+                }
+
+                app.style[prop] = value;
+            });
+        }());
+    </script>
+</body>
+</html>

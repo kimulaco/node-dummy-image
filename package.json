@@ -1,0 +1,20 @@
+{
+  "name": "node-dummy-image",
+  "version": "0.1.0",
+  "description": "A node.js module that generates dummy images.",
+  "keywords": [
+    "dummy-image"
+  ],
+  "author": "kmrk",
+  "license": "MIT",
+  "main": "lib/dummy-image.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "puppeteer": "^1.4.0"
+  },
+  "devDependencies": {
+    "jest": "^22.4.3"
+  }
+}

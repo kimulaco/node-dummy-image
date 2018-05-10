@@ -1,0 +1,8 @@
+# file
+.node-version
+npm-debug.log
+package-lock.json
+.DS_Store
+
+# directory
+node_modules
