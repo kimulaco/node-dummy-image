@@ -12,6 +12,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "ejs": "^2.6.1",
     "puppeteer": "^1.4.0"
   },
   "devDependencies": {
